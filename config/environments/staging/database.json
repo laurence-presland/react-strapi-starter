@@ -1,0 +1,14 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+        "connector": "strapi-hook-mongoose",
+        "settings": {
+          "uri": ""
+        },
+        "options": {
+          "ssl": true
+        }
+      }
+  }
+}

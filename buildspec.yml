@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  variables:
+    NODE_ENV: "production"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - npm install
+      - cd ./react-app
+      - npm install
+  build:
+    commands:
+      - npm run build
+      - cd ..
+      - cp -rf ./react-app/build/* ./public/
+      - npm run build
+artifacts:
+  files:
+    - '**/*'

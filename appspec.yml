@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /application
+hooks:
+    BeforeInstall:
+      - location: scripts/BeforeInstall.sh
+        timeout: 180
+    AfterInstall: 
+      - location: scripts/AfterInstall.sh
+        timeout: 180
